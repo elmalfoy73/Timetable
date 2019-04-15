@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="15sp"
-        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteX="274dp"
         tools:layout_editor_absoluteY="0dp"
         tools:text="Марья Ивановна" />
 
