@@ -1,4 +1,4 @@
-package bottomnav.hitherejoe.com.bottomnavigationsample;
+package com.example.elizabeth.timetable;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textTimetable = (TextView) findViewById(R.id.text_timetable);
-        textAssigment = (TextView) findViewById(R.id.text_schedules);
-        textSetting = (TextView) findViewById(R.id.text_music);
+        textAssigment = (TextView) findViewById(R.id.text_assigment);
+        textSetting = (TextView) findViewById(R.id.text_setting);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.bottom_navigation);
@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
-                            case R.id.action_favorites:
+                            case R.id.action_timetable:
                                 textTimetable.setVisibility(View.VISIBLE);
                                 textAssigment.setVisibility(View.GONE);
                                 textSetting.setVisibility(View.GONE);
                                 break;
-                            case R.id.action_schedules:
+                            case R.id.action_assigment:
                                 textTimetable.setVisibility(View.GONE);
                                 textAssigment.setVisibility(View.VISIBLE);
                                 textSetting.setVisibility(View.GONE);
                                 break;
-                            case R.id.action_music:
+                            case R.id.action_setting:
                                 textTimetable.setVisibility(View.GONE);
                                 textAssigment.setVisibility(View.GONE);
                                 textSetting.setVisibility(View.VISIBLE);
