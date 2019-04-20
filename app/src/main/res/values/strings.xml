@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Timetable</string>
+    <string name="lesson">Понедельник</string>]
+    <string name="app_name">Bottom Navigation Sample</string>
+
+    <string name="text_timetable">Timetable</string>
+    <string name="text_assigment">Assigments</string>
+    <string name="text_setting">Settings</string>
+
 </resources>
