@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textTimetable;
     private TextView textAssigment;
     private TextView textSetting;
+    private RecyclerView lessons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         textTimetable = (TextView) findViewById(R.id.text_timetable);
         textAssigment = (TextView) findViewById(R.id.text_assigment);
         textSetting = (TextView) findViewById(R.id.text_setting);
+        lessons = (RecyclerView) findViewById(R.id.lessons);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.bottom_navigation);
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                                 textTimetable.setVisibility(View.VISIBLE);
                                 textAssigment.setVisibility(View.GONE);
                                 textSetting.setVisibility(View.GONE);
+                                lessons.setVisibility(View.VISIBLE);
                                 break;
                             case R.id.action_assigment:
                                 textTimetable.setVisibility(View.GONE);
@@ -46,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
                                 textAssigment.setVisibility(View.GONE);
                                 textSetting.setVisibility(View.VISIBLE);
                                 break;
+
                         }
-                        return false;
+                        return true;
                     }
                 });
     }
